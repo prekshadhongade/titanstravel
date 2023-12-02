@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <script src="script.js"></script>
+    <header>
+        
+
+        <img src="https://tse3.mm.bing.net/th?id=OIP.N7VXkW7MBbwamtk3VMLf6QHaHa&pid=Api&P=0&h=180" alt="Logo">
+        <h1>Explore Your Destination</h1>
+        <p>TOURICE-A website that takes care of the overall travel experience of the user</p>
+    </header>
+
+    <section id="featured-destinations">
+        <h2>EXPLORE INDIA</h2>
+
+        <div class="destination" onclick="showDestinationDetails('Destination 1', 'description 1')">
+            <a href="north.html"><img src="https://4.bp.blogspot.com/-1NtNY3PD00E/Wivto6aU7xI/AAAAAAAAMXk/TsAw0BiOr_wNhF5eyt_8LHk4J_A1Sp7OQCLcBGAs/s640/north-india-new%2Bcopy.png" alt="Destination 1"></a>
+            <h3>NORTH</h3>
+        </div>
+
+        <div class="destination" onclick="showDestinationDetails('Destination 2', 'description 2')">
+            <a href="east.html"><img src="https://cdn.vectorstock.com/i/1000x1000/94/17/eastern-states-and-islands-of-india-map-vector-23599417.webp" alt="Destination 2"></a>
+            <h3>EAST</h3>
+        </div> 
+
+        <div class="destination" onclick="showDestinationDetails('Destination 1', 'description 1')">
+            <a href="west.html"><img src="https://catalog.wlimg.com/4/4147/full-images/679302.gif" alt="Destination 1"></a>
+            <h3>WEST</h3>
+        </div>
+
+        <div class="destination" onclick="showDestinationDetails('Destination 1', 'description 1')">
+            <a href="south.html"><img src="https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/4/9/490d6a50c4c0094a6809884a21f14c925bf202fa0cec1cccb131cb1013b3a527/south-india-map-slide1.png" alt="Destination 1"></a>
+            <h3>SOUTH</h3>
+        </div>
+    
+    </section>
+
+    <section id="destination-details">
+        <h2 id="destination-title"></h2>
+        <p id="destination-description"></p>
+    </section>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="login()">Login</button>
+            <p>Don't have an account? <a href="register.html">Create one here</a>.</p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

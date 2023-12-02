@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Cuisines at puri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .cuisine-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cuisine-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Local Cuisines at puri</h1>
+  </header>
+
+  <div id="cuisines-container"></div>
+
+  <script>
+    // Sample data of local cuisines
+    const cuisines = [
+      {
+        name: "Abadha",
+        image: "https://odishatourisms.com/wp-content/uploads/2019/09/abhada-mahaprasad.jpg",
+        description: " An Abadha Thali is served at the Puri Temple which comprises of all the dishes from the Mahaprashad that is served to Lord Jagannath at the Temple. The thali is priced between INR 70 – 120 and includes most varieties of local cuisine of Puri. One needs to go and have the Abadha that is served at the Temple as well as in Anand Bazaar to experience the local food in Puri at its best.",
+      },
+      {
+        name: "Rasabali",
+        image: "https://odishatourisms.com/wp-content/uploads/2019/09/rasabali.jpg",
+        description: " is a sweet dish from Odisha, India. Rasabali is offered to Baladevjew, and originated in the Baladevjew Temple of Kendrapara. It is one of the Chapana bhoga of Jagannath temple.",
+      },
+      // Add more cuisines as needed
+    ];
+
+    // Function to generate HTML for cuisine cards
+    function generateCuisineCard(cuisine) {
+      return `
+        <div class="cuisine-card">
+          <img class="cuisine-image" src="${cuisine.image}" alt="${cuisine.name}">
+          <h2>${cuisine.name}</h2>
+          <p>${cuisine.description}</p>
+        </div>
+      `;
+    }
+
+    // Function to display cuisines on the page
+    function displayCuisines() {
+      const cuisinesContainer = document.getElementById('cuisines-container');
+      
+      cuisines.forEach(cuisine => {
+        cuisinesContainer.innerHTML += generateCuisineCard(cuisine);
+      });
+    }
+
+    // Call the function to display cuisines when the page loads
+    window.onload = displayCuisines;
+  </script>
+
+</body>
+</html>
